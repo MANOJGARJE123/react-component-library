@@ -1,5 +1,4 @@
 import './Banner.css'
-
 export function Banner({status = "info", title, children}) {
     const isMultiline = title && children;
     return (
