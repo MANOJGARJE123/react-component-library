@@ -1,11 +1,13 @@
-import React from 'react';  
+import React,{useState} from 'react';  
 import './SideBar.css';
 
 const SideBar = ({ isOpen, onOpen, onClose, children }) => {
-  return (
-    <div className="sidebar">
+    return (
+    <aside className="sidebar">
       <div className="sidebar-open">
-        <button className='sidebar-open-button' onClick={onOpen}>*</button>
+        <button className='sidebar-open-button' onClick={onOpen}>
+                    ☰
+        </button>
       </div>
 
       <div className={`sidebar-panel ${isOpen ? 'open' : 'closed'}`}>
@@ -14,7 +16,7 @@ const SideBar = ({ isOpen, onOpen, onClose, children }) => {
         </button>
         {children}
       </div>
-    </div>
+    </aside>
   );
 };
 

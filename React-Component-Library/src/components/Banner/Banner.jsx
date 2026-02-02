@@ -10,4 +10,4 @@ export function Banner({status = "info", title, children}) {
                 </div>
         </div>
     )   
-}
+}   
