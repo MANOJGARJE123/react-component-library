@@ -1,10 +1,10 @@
-function TableHeader(columns) {
+function TableHeader({columns}) {
     return(
         <thead>
             <tr>
-                {
-                    
-                }
+                {columns.map((col)=>(
+                    <th key={col.key}>{col.label}</th>
+                ))}
             </tr>
         </thead>
     )
