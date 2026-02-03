@@ -11,11 +11,13 @@ const SideBar = ({ isOpen, onOpen, onClose, children }) => {
         </div>
       )}
 
-      <div className={`sidebar-panel ${isOpen ? 'open' : 'close'}`}>
+      <div className={`sidebar-panel ${isOpen ? 'open' : 'closed'}`}>
         <button className="sidebar-close-button" onClick={onClose}>
           x
         </button>
-        {children}
+        <div className='sidebar-content'>
+          {children}
+        </div>
       </div>
     </aside>
   );
