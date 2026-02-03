@@ -1,4 +1,4 @@
-function TableHeader({columns}) {
+export function TableHeader({columns}) {
     return(
         <thead>
             <tr>

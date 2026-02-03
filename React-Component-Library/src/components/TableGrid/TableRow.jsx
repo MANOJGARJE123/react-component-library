@@ -1,9 +1,9 @@
 export function TableRow({rowData,columns, action}){
     return(
-        <TableRow>
+        <tr>
             {columns.map((col)=>(
                 <td key={col.key}>{rowData[col.key]}</td>
             ))}
-        </TableRow>
+        </tr>
     )
 }
