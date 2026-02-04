@@ -4,6 +4,10 @@ export function TableRow({rowData,columns, action}){
             {columns.map((col)=>(
                 <td key={col.key}>{rowData[col.key]}</td>
             ))}
+
+            <td> 
+                <TableAction actions={action} rowData={rowData}></TableAction>
+            </td>
         </tr>
     )
 }

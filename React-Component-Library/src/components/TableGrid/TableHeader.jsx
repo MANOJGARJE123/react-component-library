@@ -1,11 +1,11 @@
 export function TableHeader({columns}) {
     return(
-        <tfoot>
+        <thead>
             <tr>
                 {columns.map((col)=>(
                     <th key={col.key}>{col.label}</th>
                 ))}
             </tr>
-        </tfoot>
+        </thead>
     )
 }
