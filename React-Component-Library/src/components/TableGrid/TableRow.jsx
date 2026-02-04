@@ -1,13 +1,13 @@
-export function TableRow({rowData,columns, action}){
+export function TableRow({rowData,columns, actions}){
     return(
         <tr>
             {columns.map((col)=>(
                 <td key={col.key}>{rowData[col.key]}</td>
             ))}
 
-            <td> 
-                <TableAction actions={action} rowData={rowData}></TableAction>
-            </td>
+            (actions && <td> 
+                <TableAction actions={actions} rowData={rowData}></TableAction>
+            </td>)
         </tr>
     )
 }
