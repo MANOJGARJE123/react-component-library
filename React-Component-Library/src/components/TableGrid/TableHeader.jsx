@@ -1,4 +1,4 @@
-function TableHeader({columns}){
+function TableHeader({columns = []}){
     return (
         <thead>
            <tr>
