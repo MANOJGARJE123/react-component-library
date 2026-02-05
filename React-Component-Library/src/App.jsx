@@ -1,19 +1,30 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { SideBar } from './components/SideBar'
+import { TableGrid } from './components/TableGrid/TableGrid'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [isSidearOpen, setIsSidebarOpen] = useState(false);
+  const columns = [
+    { key: 'name', label: 'Name' },
+    { key: 'age', label: 'Age' },
+  ];
+  const rowData = [
+    { name: 'manoj', age: 30 },
+  ];
 
   return (
-    <>
+    <div>
+    <div>
       <SideBar isOpen={isSidearOpen} onOpen={() => setIsSidebarOpen(true)} onClose={() => setIsSidebarOpen(false)}>
         <h2>SideBar Content</h2>
       </SideBar>
-    </>
+    </div>
+    <div>
+      <h1>React component library</h1>
+         <TableGrid columns={columns} rowData={rowData}></TableGrid>
+    </div>
+    </div>
   )
 }
 
