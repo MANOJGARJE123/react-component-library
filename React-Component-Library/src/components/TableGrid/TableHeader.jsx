@@ -1,11 +1,13 @@
-export function TableHeader({columns}) {
+export function TableRow({rowData,columns, actions}){
     return(
-        <thead>
-            <tr>
-                {columns.map((col)=>(
-                    <th key={col.key}>{col.label}</th>
-                ))}
-            </tr>
-        </thead>
+        <tr>
+            {columns.map((col)=>(
+                <td key={col.key}>{rowData[col.key]}</td>
+            ))}
+
+            (actions && <td> 
+                <TableAction actions={actions} rowData={rowData}></TableAction>
+            </td>)
+        </tr>
     )
 }
