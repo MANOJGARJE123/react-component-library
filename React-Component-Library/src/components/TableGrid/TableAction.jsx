@@ -1,15 +1,11 @@
-import { useState } from "react";
-
-function TableAction({ actions, rowData }) {
-  const [open, setOpen] = useState(false);
-
+function TableAction({ actions = [], rowData = {}, isOpen = false, onToggle = () => {} }) {
   return (
     <div style={{ position: "relative" }}>
-      <button onClick={() => setOpen(!open)}>
+      <button onClick={onToggle}>
         Actions
       </button>
 
-      {open && (
+      {isOpen && (
         <div className="actions-menu">
           {actions.map((action, index) => (
             <div
@@ -17,7 +13,7 @@ function TableAction({ actions, rowData }) {
               className="action-item"
               onClick={() => {
                 action.onClick(rowData);
-                setOpen(false);
+                onToggle();
               }} 
             >
               {action.label}
@@ -29,4 +25,4 @@ function TableAction({ actions, rowData }) {
   );
 }
 
-export default TableAction;
+export { TableAction };

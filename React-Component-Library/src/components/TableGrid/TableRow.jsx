@@ -1,15 +1,26 @@
-import TableAction from "./TableAction"
+import { TableAction } from "./TableActions";
 
-export function TableRow({rowData,columns, actions}){
-    return(
-        <tr>
-            {columns.map((col)=>(
-                <td key={col.key}>{rowData[col.key]}</td>
-            ))}
+function TableRow({ rowIndex, row = {}, columns = [], actions, isOpen, onToggle }) {
+  return (
+    <tr>
+      {columns.map((col) => (
+        <td key={col.key}>
+          {row[col.key]}
+        </td>
+      ))}
 
-            {actions && <td> 
-                <TableAction actions={actions} rowData={rowData}></TableAction>
-            </td>}
-        </tr>
-    )
+      {actions && (
+        <td>
+          <TableAction 
+            actions={actions} 
+            rowData={row}  
+            isOpen={isOpen}
+            onToggle={() => onToggle(rowIndex)}
+          />
+        </td>
+      )}
+    </tr>
+  );
 }
+
+export default TableRow;

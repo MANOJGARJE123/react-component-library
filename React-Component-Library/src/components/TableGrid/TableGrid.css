@@ -42,7 +42,7 @@
 
 .actions-menu {
   position: absolute;
-  top: 100%;
+  top: 50%;
   right: 0;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -59,10 +59,6 @@
   color: #333;
   border-bottom: 1px solid #eee;
   font-size: 14px;
-}
-
-.action-item:last-child {
-  border-bottom: none;
 }
 
 .action-item:hover {
