@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function TableAction({ actions, rowData }) {
+function TableAction({ actions, rowData }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -28,3 +28,5 @@ export function TableAction({ actions, rowData }) {
     </div>
   );
 }
+
+export default TableAction;

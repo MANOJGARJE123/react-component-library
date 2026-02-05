@@ -1,13 +1,13 @@
-export function TableRow({rowData,columns, actions}){
-    return(
-        <tr>
-            {columns.map((col)=>(
-                <td key={col.key}>{rowData[col.key]}</td>
-            ))}
-
-            (actions && <td> 
-                <TableAction actions={actions} rowData={rowData}></TableAction>
-            </td>)
-        </tr>
+function TableHeader({columns}){
+    return (
+        <thead>
+           <tr>
+             {columns.map((col) => (
+                <th key={col.key}>{col.label}</th>
+             ))}
+           </tr>
+        </thead>
     )
 }
+
+export default TableHeader;

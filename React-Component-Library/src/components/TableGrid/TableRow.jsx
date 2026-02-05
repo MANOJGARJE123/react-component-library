@@ -1,3 +1,5 @@
+import TableAction from "./TableAction"
+
 export function TableRow({rowData,columns, actions}){
     return(
         <tr>
@@ -5,9 +7,9 @@ export function TableRow({rowData,columns, actions}){
                 <td key={col.key}>{rowData[col.key]}</td>
             ))}
 
-            (actions && <td> 
+            {actions && <td> 
                 <TableAction actions={actions} rowData={rowData}></TableAction>
-            </td>)
+            </td>}
         </tr>
     )
 }
