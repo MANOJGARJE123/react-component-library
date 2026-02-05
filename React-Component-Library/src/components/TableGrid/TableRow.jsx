@@ -1,4 +1,4 @@
-import { TableAction } from "./TableActions";
+import { TableAction } from "./TableAction";
 
 function TableRow({ rowIndex, row = {}, columns = [], actions, isOpen, onToggle }) {
   return (
