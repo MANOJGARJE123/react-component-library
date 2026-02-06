@@ -12,10 +12,17 @@ function App() {
     { key: 'name', label: 'Name' },
     { key: 'age', label: 'Age' },
   ];
-
   const rowData = [
-    { name: 'manoj', age: 30 },
+    { name: 'manoj', age: 22 },
+    { name: 'manoj', age: 22 },
+    { name: 'manoj', age: 22 },
+    { name: 'manoj', age: 22 },
+    { name: 'manoj', age: 22 },
   ];
+  const actions = [
+    { label: 'Edit', onClick: (row) => console.log('Edit', row) },
+    { label: 'Delete', onClick: (row) => console.log('Delete', row) },
+  ]
 
   return (
     <div>
@@ -23,15 +30,13 @@ function App() {
         <SideBar
           isOpen={isSidearOpen}
           onOpen={() => setIsSidebarOpen(true)}
-          onClose={() => setIsSidebarOpen(false)}
-        >
+          onClose={() => setIsSidebarOpen(false)}>
           <h2>SideBar Content</h2>
         </SideBar>
       </div>
 
       <div>
-        <h1>React component library</h1>
-
+        <h1>component library</h1>
         <Dropdown
           options={[
             {
@@ -44,10 +49,8 @@ function App() {
             },
           ]}
         />
-
         <br /><br />
-
-        <TableGrid columns={columns} rowData={rowData} />
+        <TableGrid columns={columns} rowData={rowData} actions={actions}/>
       </div>
     </div>
   )

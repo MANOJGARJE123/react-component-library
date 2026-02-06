@@ -3,8 +3,7 @@ import {useState} from 'react';
 function Dropdown({options}){
     const [isDropDownOpen, setIsDropDownOpen] = useState(false);
 
-    function toggleDropDown(e){
-        e.preventDefault();
+    function toggleDropDown(){
         setIsDropDownOpen(!isDropDownOpen);
     }
 
@@ -13,7 +12,6 @@ function Dropdown({options}){
             <button onClick={toggleDropDown}>
                 Actions
             </button>
-
             {
                 isDropDownOpen && (
                     <div className='DropDown-options'>

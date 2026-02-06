@@ -9,7 +9,7 @@ export function TableGrid({columns = [], rowData = [], actions}){
     return (
         <div className="table-wrapper">
             <table className="table-columns">
-                <TableHeader columns={columns}></TableHeader>
+                <TableHeader columns={columns}  hasActions={actions && actions.length > 0}></TableHeader>
                 <tbody>
                     {rowData.map((row, index)=>(
                           <TableRow key={index} 
