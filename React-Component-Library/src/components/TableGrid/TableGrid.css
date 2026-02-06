@@ -34,7 +34,6 @@
 
 .actions-menu {
   position: absolute;
-  /* top: 50%; */
   right: 0;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -42,7 +41,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   min-width: 120px;
   z-index: 10;
-  /* margin-top: 4px; */
 }
 
 .action-item {
@@ -61,6 +59,7 @@
   background-color:white;
   color: blue;
   border: none;
+  border: 1px solid #2563eb;
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
@@ -71,6 +70,11 @@
 .table-columns button:hover {
   background-color: #007bff;
   color : white;
+}
+
+.table-columns {
+  position: relative;
+  border: 1px solid black;
 }
 
 
