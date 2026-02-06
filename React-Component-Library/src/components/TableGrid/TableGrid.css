@@ -8,7 +8,6 @@
   border-collapse: collapse;
   border: 1px solid #ddd;
   background-color: #fff;
-  table-layout: fixed;
 }
 
 .table-columns thead {
@@ -35,7 +34,7 @@
 
 .actions-menu {
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   right: 0;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -43,7 +42,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   min-width: 120px;
   z-index: 10;
-  margin-top: 4px;
+  /* margin-top: 4px; */
 }
 
 .action-item {
@@ -59,13 +58,19 @@
 }
 
 .table-columns button {
-  background-color: #007bff;
-  color: #fff;
+  background-color:white;
+  color: blue;
   border: none;
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
+  border-color: #007bff
+}
+
+.table-columns button:hover {
+  background-color: #007bff;
+  color : white;
 }
 
 

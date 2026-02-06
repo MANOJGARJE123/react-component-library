@@ -11,13 +11,14 @@ function App() {
   const columns = [
     { key: 'name', label: 'Name' },
     { key: 'age', label: 'Age' },
+    { key: 'number', label: 'Number' },
   ];
   const rowData = [
-    { name: 'manoj', age: 22 },
-    { name: 'manoj', age: 22 },
-    { name: 'manoj', age: 22 },
-    { name: 'manoj', age: 22 },
-    { name: 'manoj', age: 22 },
+    { name: 'manoj', age: 22, number: '123-456-7890' },
+    { name: 'manoj', age: 22, number: '123-456-7890' },
+    { name: 'manoj', age: 22, number: '123-456-7890' },
+    { name: 'manoj', age: 22, number: '123-456-7890' },
+    { name: 'manoj', age: 22, number: '123-456-7890' },
   ];
   const actions = [
     { label: 'Edit', onClick: (row) => console.log('Edit', row) },
