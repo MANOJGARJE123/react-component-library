@@ -16,7 +16,7 @@ function Dropdown({options}){
 
             {
                 isDropDownOpen && (
-                    <div className='DropDown-opetions'>
+                    <div className='DropDown-options'>
                        {
                         options.map((option, index) => (
                             <div key={index} className='DropDown-option' onClick={option.onClick}>
